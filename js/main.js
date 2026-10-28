@@ -175,19 +175,17 @@
   /* ---------------------------------------------------------------
      7. Demo contact form — validates locally, sends NOTHING.
         The success message states this explicitly.
+        The submit button is type="button" (not type="submit") so the
+        form can never be submitted while JavaScript is off: no
+        request, no reload, no fields appended to the URL. Enter in a
+        single-line input runs the same flow while JS is active; the
+        textarea keeps its native newline.
   --------------------------------------------------------------- */
   const form = document.getElementById("quote-form");
   const success = document.getElementById("form-success");
 
   if (form && success) {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
-      if (!form.checkValidity()) {
-        form.reportValidity(); // native messages, browser-translated
-        return;
-      }
-
+    const showSuccess = () => {
       const rawName = form.elements["name"] ? form.elements["name"].value.trim() : "";
       const firstName = rawName.split(/\s+/)[0] || "friend";
       const nameEl = success.querySelector("[data-success-name]");
@@ -196,6 +194,25 @@
       form.hidden = true;
       success.hidden = false;
       success.focus();
+    };
+    const trySubmit = () => {
+      if (!form.checkValidity()) {
+        form.reportValidity(); // native messages, browser-translated
+        return;
+      }
+      showSuccess();
+    };
+
+    const submitBtn = form.querySelector('button[type="button"]');
+    if (submitBtn) submitBtn.addEventListener("click", trySubmit);
+
+    form.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter") return;
+      const target = event.target;
+      if (target instanceof HTMLInputElement && target.type !== "checkbox" && target.type !== "radio") {
+        event.preventDefault(); // belt and braces: also blocks implicit submission
+        trySubmit();
+      }
     });
 
     const again = document.getElementById("form-again");
@@ -210,7 +227,41 @@
   }
 
   /* ---------------------------------------------------------------
-     8. Footer year, always current
+     8. "Choose this service" links (service cards)
+        Each link carries data-service matching an existing
+        <option> of #cf-service. Clicking it jumps to the form and
+        preselects that service. No new options or IDs are created.
+  --------------------------------------------------------------- */
+  const serviceSelect = document.getElementById("cf-service");
+  const serviceLinks = document.querySelectorAll("[data-service]");
+
+  if (serviceSelect && serviceLinks.length) {
+    const serviceOptions = Array.from(serviceSelect.options);
+
+    serviceLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        const wanted = (link.dataset.service || "").trim().toLowerCase();
+        const match = serviceOptions.find(
+          (option) => option.text.trim().toLowerCase() === wanted
+        );
+        if (!match) return;
+
+        // If the success panel is open, bring the form back first.
+        if (form && success && form.hidden && !success.hidden) {
+          success.hidden = true;
+          form.hidden = false;
+        }
+
+        serviceSelect.value = match.value; // option.value equals its text here
+        window.setTimeout(() => {
+          serviceSelect.focus({ preventScroll: true });
+        }, 350);
+      });
+    });
+  }
+
+  /* ---------------------------------------------------------------
+     9. Footer year, always current
   --------------------------------------------------------------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());

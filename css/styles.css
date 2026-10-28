@@ -10,7 +10,7 @@
   --clr-primary-dark: #08513f;
   --clr-accent: #ffb703;         /* warm highlight */
   --clr-ink: #15271f;            /* main text */
-  --clr-muted: #5c6b65;          /* secondary text */
+  --clr-muted: #4d5d56;          /* secondary text */
   --clr-bg: #faf9f6;             /* page background */
   --clr-tint: #e7f4ef;           /* soft brand tint */
   --clr-tint-2: #f4f9f7;         /* section tint */
@@ -483,6 +483,27 @@ button { font: inherit; }
   color: var(--clr-primary-strong);
 }
 
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 12px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--clr-primary-strong);
+}
+.card-link svg {
+  width: 16px; height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s ease;
+}
+.card-link:hover { color: var(--clr-primary-dark); }
+.card-link:hover svg { transform: translateX(3px); }
+
 /* ---------- About ---------- */
 .about {
   display: grid;
@@ -564,12 +585,12 @@ button { font: inherit; }
   display: block;
   margin-top: 5px;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.92);
 }
 .stats-note {
   grid-column: 1 / -1;
   font-size: 0.74rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* ---------- Testimonials ---------- */
@@ -735,7 +756,7 @@ button { font: inherit; }
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 .field input::placeholder,
-.field textarea::placeholder { color: #9db1a9; }
+.field textarea::placeholder { color: #647770; }
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
