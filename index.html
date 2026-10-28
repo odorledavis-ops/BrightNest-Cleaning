@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrightNest Cleaning — Residential Cleaning in Portland, OR | Portfolio Demo</title>
+  <meta name="description" content="BrightNest Cleaning is a fictional residential cleaning company — a front-end portfolio demo built with HTML5, CSS3 and vanilla JavaScript.">
+  <meta name="theme-color" content="#0f8a6d">
+  <meta property="og:title" content="BrightNest Cleaning — Portfolio Demo">
+  <meta property="og:description" content="A fictional residential cleaning company website built as a front-end portfolio demo.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230f8a6d'/><path d='M32 10l4.5 15.5L52 30l-15.5 4.5L32 50l-4.5-15.5L12 30l15.5-4.5z' fill='%23ffb703'/></svg>">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <p class="demo-banner">
+    Portfolio demo — BrightNest Cleaning is a <strong>fictional company</strong> created to showcase front-end work. All content is illustrative.
+  </p>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="#home" aria-label="BrightNest Cleaning — back to top">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <rect width="40" height="40" rx="11" fill="#0f8a6d"/>
+          <path d="M20 8l3.2 8.8L32 20l-8.8 3.2L20 32l-3.2-8.8L8 20l8.8-3.2z" fill="#ffb703"/>
+        </svg>
+        <span class="brand-text">
+          <strong>Bright<em>Nest</em></strong>
+          <small>Cleaning Co.</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">Toggle menu</span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-list" id="primary-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn--primary nav-cta">Get a free quote</a>
+
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home" data-section>
+      <div class="container hero-inner">
+
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">Residential cleaning · Portland, OR</p>
+          <h1 class="hero-title">A spotless home, <em>without lifting a finger.</em></h1>
+          <p class="hero-lead">
+            BrightNest&rsquo;s vetted, insured cleaners keep your home fresh and sparkling —
+            on your schedule, with eco-friendly products and a 100% satisfaction guarantee.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn--primary">Get my free quote</a>
+            <a href="#services" class="btn btn--ghost">Explore services</a>
+          </div>
+          <ul class="trust-row">
+            <li class="trust-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Insured &amp; bonded
+            </li>
+            <li class="trust-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Satisfaction guaranteed
+            </li>
+            <li class="trust-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Flexible scheduling
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-art" data-reveal style="--d:.15s">
+          <div class="hero-card">
+            <svg class="hero-illustration" viewBox="0 0 520 400" role="img" aria-labelledby="hero-illu-title" focusable="false">
+              <title id="hero-illu-title">Illustration of a clean, sparkling house</title>
+              <circle cx="260" cy="196" r="168" fill="#eaf5f0"/>
+              <ellipse cx="260" cy="352" rx="205" ry="24" fill="#ddf0e8"/>
+              <rect x="312" y="98" width="22" height="46" rx="5" fill="#0b6b55"/>
+              <path d="M128 196 L260 88 L392 196 Z" fill="#0f8a6d"/>
+              <rect x="150" y="190" width="220" height="136" rx="10" fill="#ffffff" stroke="#dbe9e4" stroke-width="3"/>
+              <g fill="#dff2ec" stroke="#c2e4d8" stroke-width="2.5">
+                <rect x="174" y="216" width="52" height="46" rx="8"/>
+                <rect x="314" y="216" width="52" height="46" rx="8"/>
+              </g>
+              <rect x="252" y="238" width="46" height="88" rx="9" fill="#0f8a6d"/>
+              <circle cx="288" cy="284" r="3.5" fill="#ffb703"/>
+              <circle cx="168" cy="322" r="17" fill="#9ed3c3"/>
+              <circle cx="192" cy="328" r="11" fill="#7cc7b2"/>
+              <circle cx="356" cy="322" r="15" fill="#9ed3c3"/>
+              <path d="M0 -13 L3 -3 L13 0 L3 3 L0 13 L-3 3 L-13 0 L-3 -3 Z" transform="translate(404 104) scale(1.4)" fill="#ffb703"/>
+              <path d="M0 -13 L3 -3 L13 0 L3 3 L0 13 L-3 3 L-13 0 L-3 -3 Z" transform="translate(120 150) scale(.9)" fill="#ffb703"/>
+              <path d="M0 -13 L3 -3 L13 0 L3 3 L0 13 L-3 3 L-13 0 L-3 -3 Z" transform="translate(432 250) scale(.7)" fill="#7cc7b2"/>
+              <g fill="none" stroke="#9ed3c3" stroke-width="3">
+                <circle cx="128" cy="252" r="9"/>
+                <circle cx="424" cy="180" r="7"/>
+                <circle cx="404" cy="286" r="5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="chip chip--rating" aria-hidden="true">
+            <span class="chip-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+            </span>
+            <span class="chip-text"><strong>4.9/5</strong><small>client rating</small></span>
+          </div>
+          <div class="chip chip--eco" aria-hidden="true">
+            <span class="chip-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4C11 5 5 10 5 19c9 0 14-6 15-15z"/><path d="M5 19C9 13 13 10 17 7"/></svg>
+            </span>
+            <span class="chip-text"><strong>Eco-friendly</strong><small>safe products</small></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section section--white" id="services" data-section>
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">Our services</p>
+          <h2 class="section-title">Cleaning plans for every home</h2>
+          <p class="section-lead">
+            One-time refreshes or recurring visits — every booking includes supplies,
+            a vetted team and our happiness guarantee.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="card" data-reveal>
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/>
+                <path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z"/>
+              </svg>
+            </span>
+            <h3 class="card-title">Standard Home Cleaning</h3>
+            <p class="card-text">Recurring weekly or biweekly visits that keep every room tidy, fresh and guest-ready.</p>
+            <p class="card-meta">From $89 / visit</p>
+          </article>
+
+          <article class="card card--featured" data-reveal style="--d:.08s">
+            <span class="tag-popular">Most popular</span>
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="10" r="4"/><circle cx="15" cy="14" r="3"/><circle cx="10" cy="17" r="2"/>
+              </svg>
+            </span>
+            <h3 class="card-title">Deep Cleaning</h3>
+            <p class="card-text">A meticulous top-to-bottom reset for baseboards, grout, vents and the spots routine cleans miss.</p>
+            <p class="card-meta">From $179 / visit</p>
+          </article>
+
+          <article class="card" data-reveal style="--d:.16s">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/>
+                <path d="M4 7.5l8 4.5 8-4.5M12 12v9"/>
+              </svg>
+            </span>
+            <h3 class="card-title">Move-In / Move-Out</h3>
+            <p class="card-text">Landlord-ready cleaning that helps you leave a place spotless and start fresh in the next one.</p>
+            <p class="card-meta">From $199 / visit</p>
+          </article>
+
+          <article class="card" data-reveal>
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/>
+              </svg>
+            </span>
+            <h3 class="card-title">Kitchen &amp; Bath Detail</h3>
+            <p class="card-text">Focused deep detail on the two rooms that matter most: degreased kitchens and sanitized baths.</p>
+            <p class="card-meta">From $69 / visit</p>
+          </article>
+
+          <article class="card" data-reveal style="--d:.08s">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 4C11 5 5 10 5 19c9 0 14-6 15-15z"/>
+                <path d="M5 19C9 13 13 10 17 7"/>
+              </svg>
+            </span>
+            <h3 class="card-title">Eco-Friendly Cleaning</h3>
+            <p class="card-text">Plant-based, low-tox products that are safer for kids, pets and the planet — on every plan.</p>
+            <p class="card-meta">No extra cost</p>
+          </article>
+
+          <article class="card" data-reveal style="--d:.16s">
+            <span class="icon-bubble" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="14" r="4"/>
+                <path d="M11.2 11.8L20 3M17 7l2.5 2.5M14 10l1.8 1.8"/>
+              </svg>
+            </span>
+            <h3 class="card-title">Vacation Rental Turnover</h3>
+            <p class="card-text">Fast, checklist-driven turnovers with linen changes and restocking between every guest.</p>
+            <p class="card-meta">From $75 / visit</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section section--tinted" id="about" data-section>
+      <div class="container about">
+
+        <div class="about-copy" data-reveal>
+          <p class="eyebrow">About us</p>
+          <h2 class="section-title">A small team obsessed with the details</h2>
+          <p>
+            BrightNest started in 2014 with two cleaners, one van and a simple promise:
+            treat every home like it&rsquo;s our own. Today our fully vetted, background-checked
+            team serves hundreds of households across the Portland metro area.
+          </p>
+          <p>
+            We show up on time, bring everything we need, and follow a 50-point checklist on
+            every visit. If something isn&rsquo;t right, we come back and make it right — free.
+          </p>
+          <ul class="about-values">
+            <li class="value-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Vetted, trained &amp; insured professionals
+            </li>
+            <li class="value-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              Eco-friendly, family-safe products
+            </li>
+            <li class="value-item">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+              100% satisfaction guarantee, every visit
+            </li>
+          </ul>
+        </div>
+
+        <div class="stats-card" data-reveal style="--d:.15s">
+          <div class="stat">
+            <b><span data-counter="2400" data-suffix="+">2,400+</span></b>
+            <span class="stat-label">Homes cleaned</span>
+          </div>
+          <div class="stat">
+            <b><span data-counter="12" data-suffix="+">12+</span></b>
+            <span class="stat-label">Years of experience</span>
+          </div>
+          <div class="stat">
+            <b><span data-counter="15" data-suffix="">15</span></b>
+            <span class="stat-label">Team professionals</span>
+          </div>
+          <div class="stat">
+            <b><span data-counter="98" data-suffix="%">98%</span></b>
+            <span class="stat-label">Satisfaction rate</span>
+          </div>
+          <p class="stats-note">Illustrative figures for this demo.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section section--white" id="testimonials" data-section>
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">Testimonials</p>
+          <h2 class="section-title">What our clients say</h2>
+          <p class="section-lead head-note">
+            <strong>Disclaimer:</strong> the reviews below are fictional samples written for this
+            portfolio demo. They do not represent real customers.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+
+          <figure class="t-card" data-reveal>
+            <svg class="t-quote-mark" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.2 6C4.4 7.4 3 9.8 3 13.2V18h5.5v-5.5H6.2c.1-1.9 1-3 2.9-3.6L7.2 6zm9 0c-2.8 1.4-4.2 3.8-4.2 7.2V18h5.5v-5.5h-2.3c.1-1.9 1-3 2.9-3.6L16.2 6z"/>
+            </svg>
+            <div class="t-stars" aria-label="Rated 5 out of 5 stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+            </div>
+            <blockquote>
+              <p>&ldquo;They transformed our place before a family visit. Every corner looked brand-new, and the team was friendly and punctual.&rdquo;</p>
+            </blockquote>
+            <figcaption class="t-foot">
+              <span class="avatar" aria-hidden="true">SM</span>
+              <span class="t-who">
+                <span class="t-name">Sarah Mitchell</span>
+                <span class="t-role">Homeowner · Portland, OR</span>
+              </span>
+              <span class="demo-badge">Demo review</span>
+            </figcaption>
+          </figure>
+
+          <figure class="t-card" data-reveal style="--d:.08s">
+            <svg class="t-quote-mark" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.2 6C4.4 7.4 3 9.8 3 13.2V18h5.5v-5.5H6.2c.1-1.9 1-3 2.9-3.6L7.2 6zm9 0c-2.8 1.4-4.2 3.8-4.2 7.2V18h5.5v-5.5h-2.3c.1-1.9 1-3 2.9-3.6L16.2 6z"/>
+            </svg>
+            <div class="t-stars" aria-label="Rated 5 out of 5 stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+            </div>
+            <blockquote>
+              <p>&ldquo;Booked a move-out clean and got our full deposit back. Transparent pricing and zero hassle from booking to finish.&rdquo;</p>
+            </blockquote>
+            <figcaption class="t-foot">
+              <span class="avatar" aria-hidden="true">DR</span>
+              <span class="t-who">
+                <span class="t-name">Daniel Reyes</span>
+                <span class="t-role">Renter · Austin, TX</span>
+              </span>
+              <span class="demo-badge">Demo review</span>
+            </figcaption>
+          </figure>
+
+          <figure class="t-card" data-reveal style="--d:.16s">
+            <svg class="t-quote-mark" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.2 6C4.4 7.4 3 9.8 3 13.2V18h5.5v-5.5H6.2c.1-1.9 1-3 2.9-3.6L7.2 6zm9 0c-2.8 1.4-4.2 3.8-4.2 7.2V18h5.5v-5.5h-2.3c.1-1.9 1-3 2.9-3.6L16.2 6z"/>
+            </svg>
+            <div class="t-stars" aria-label="Rated 5 out of 5 stars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.26 6.6.6-5 4.4 1.5 6.5L12 16.9 5.9 19.8l1.5-6.5-5-4.4 6.6-.6L12 2z"/></svg>
+            </div>
+            <blockquote>
+              <p>&ldquo;Reliable turnover cleans for my rental between guests. Communication is quick and the checklist is thorough.&rdquo;</p>
+            </blockquote>
+            <figcaption class="t-foot">
+              <span class="avatar" aria-hidden="true">ET</span>
+              <span class="t-who">
+                <span class="t-name">Emily Tran</span>
+                <span class="t-role">Vacation rental host · Denver, CO</span>
+              </span>
+              <span class="demo-badge">Demo review</span>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BAND ============ -->
+    <section class="section section--white cta-section" aria-label="Call to action">
+      <div class="container">
+        <div class="cta-band" data-reveal>
+          <div class="cta-copy">
+            <h2>Ready for a brighter home?</h2>
+            <p>Book a free, no-pressure estimate — it only takes a minute.</p>
+          </div>
+          <a href="#contact" class="btn btn--accent">Get my free quote</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--tinted" id="contact" data-section>
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">Contact</p>
+          <h2 class="section-title">Get your free quote</h2>
+          <p class="section-lead">Tell us about your home and we&rsquo;ll get back to you within one business day.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-form-card" data-reveal>
+            <form id="quote-form" novalidate="novalidate">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="cf-name">Full name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="cf-name" name="name" placeholder="Jane Doe" autocomplete="name" required>
+                </div>
+                <div class="field">
+                  <label for="cf-email">Email <span aria-hidden="true">*</span></label>
+                  <input type="email" id="cf-email" name="email" placeholder="jane@example.com" autocomplete="email" required>
+                </div>
+                <div class="field">
+                  <label for="cf-phone">Phone</label>
+                  <input type="tel" id="cf-phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel">
+                </div>
+                <div class="field">
+                  <label for="cf-service">Service <span aria-hidden="true">*</span></label>
+                  <select id="cf-service" name="service" required>
+                    <option value="" selected disabled>Choose a service&hellip;</option>
+                    <option>Standard home cleaning</option>
+                    <option>Deep cleaning</option>
+                    <option>Move-in / move-out</option>
+                    <option>Kitchen &amp; bath detail</option>
+                    <option>Eco-friendly cleaning</option>
+                    <option>Vacation rental turnover</option>
+                    <option>Not sure yet</option>
+                  </select>
+                </div>
+                <div class="field field--full">
+                  <label for="cf-message">Message <span aria-hidden="true">*</span></label>
+                  <textarea id="cf-message" name="message" rows="4" placeholder="Tell us about your home: size, rooms, pets, preferred days…" required></textarea>
+                </div>
+                <div class="field--full">
+                  <button type="submit" class="btn btn--primary">Request my free quote</button>
+                </div>
+              </div>
+              <p class="form-hint">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 7.5v.5"/></svg>
+                Demo form — nothing is sent or stored. Your data never leaves this page.
+              </p>
+            </form>
+
+            <div class="form-success" id="form-success" tabindex="-1" hidden>
+              <span class="success-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              </span>
+              <h3>Request validated!</h3>
+              <p>Thanks, <strong data-success-name>friend</strong>. Your details passed local validation.</p>
+              <p class="success-note">
+                This is a portfolio demo: no form data was sent anywhere — it stays in your browser.
+              </p>
+              <button type="button" class="btn btn--ghost" id="form-again">Send another demo request</button>
+            </div>
+          </div>
+
+          <aside class="contact-aside" data-reveal style="--d:.15s">
+            <div class="info-card">
+              <h3>Contact details</h3>
+              <div class="info-item">
+                <span class="info-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 8 7 15 15 15l2-4-4-2-2 2c-3-1.5-5.5-4-7-7l2-2-2-4-4 2z"/></svg>
+                </span>
+                <span class="info-text">
+                  <small>Phone</small>
+                  <a href="tel:+15550134477">(555) 013-4477</a>
+                </span>
+              </div>
+              <div class="info-item">
+                <span class="info-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg>
+                </span>
+                <span class="info-text">
+                  <small>Email</small>
+                  <a href="mailto:hello@brightnestcleaning.com">hello@brightnestcleaning.com</a>
+                </span>
+              </div>
+              <div class="info-item">
+                <span class="info-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                </span>
+                <span class="info-text">
+                  <small>Service area</small>
+                  <span>Portland, OR &amp; surrounding areas</span>
+                </span>
+              </div>
+              <div class="info-item">
+                <span class="info-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </span>
+                <span class="info-text">
+                  <small>Hours</small>
+                  <span>Mon – Sat · 8:00 AM – 6:00 PM</span>
+                </span>
+              </div>
+              <p class="demo-note">Fictional contact details for this demo.</p>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-about">
+          <a class="brand brand--footer" href="#home">
+            <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+              <rect width="40" height="40" rx="11" fill="#ffb703"/>
+              <path d="M20 8l3.2 8.8L32 20l-8.8 3.2L20 32l-3.2-8.8L8 20l8.8-3.2z" fill="#10261f"/>
+            </svg>
+            <span class="brand-text">
+              <strong>Bright<em>Nest</em></strong>
+              <small>Cleaning Co.</small>
+            </span>
+          </a>
+          <p>A fictional residential cleaning company, created as a professional front-end portfolio demo.</p>
+          <div class="social-row">
+            <a class="social-link" href="#" data-demo-link aria-label="Facebook (demo link, not functional)">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h2V5h-2c-2.2 0-4 1.8-4 4v2H8v3h2v6h3v-6h2.3l.7-3H13V9c0-.6.4-1 1-1z"/></svg>
+            </a>
+            <a class="social-link" href="#" data-demo-link aria-label="Instagram (demo link, not functional)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.5"/><circle cx="16.8" cy="7.2" r=".9" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a class="social-link" href="#" data-demo-link aria-label="X / Twitter (demo link, not functional)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-col" aria-label="Footer navigation">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li>Standard cleaning</li>
+            <li>Deep cleaning</li>
+            <li>Move-in / move-out</li>
+            <li>Kitchen &amp; bath detail</li>
+            <li>Rental turnovers</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+15550134477">(555) 013-4477</a></li>
+            <li><a href="mailto:hello@brightnestcleaning.com">hello@brightnestcleaning.com</a></li>
+            <li>Portland, OR (fictional)</li>
+            <li>Mon – Sat · 8 AM – 6 PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> BrightNest Cleaning — a fictional company. Portfolio demo.</p>
+        <p>Built with HTML5 · CSS3 · JavaScript — no frameworks, no paid services.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+</body>
+</html>
